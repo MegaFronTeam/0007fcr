@@ -10,7 +10,7 @@ $mail->Encoding = 'base64';
 $mail->CharSet = 'utf-8';
 
 ///who send 
-$mail->setFrom('info@info.com','info info');
+$mail->setFrom('info@info.com','info@carbuyback.ru');
 
  $mail->addAddress('arts.man@mail.ru');
  // $mail->addAddress('horenkova369@gmail.com');
@@ -19,7 +19,7 @@ $mail->setFrom('info@info.com','info info');
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Заявка с сайта carbuyback.ru/';
 
 $time = date('d.m.Y в H:i');
 $html = '
