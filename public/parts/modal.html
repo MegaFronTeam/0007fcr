@@ -1,0 +1,49 @@
+
+<!--  start modals-->
+<div id="modal-call" style="display: none">
+	<div class="modal-win">
+		<div class="form-wrap">
+			<form>
+				<input name="example-input-field" type="hidden"/>
+				<input class="order" name="order" type="hidden" value="форма в модалке"/>
+				<input class="utm_source" name="utm_source" type="hidden"/>
+				<input class="utm_term" name="utm_term" type="hidden"/>
+				<input class="utm_medium" name="utm_medium" type="hidden"/>
+				<input class="utm_campaign" name="utm_campaign" type="hidden"/>
+				<div class="text-center">
+					<div class="form-wrap__title">Оставить заявку
+					</div>
+					<p class="after-headline">Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
+				</div>
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше Имя" required="required"/> 
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___)-___-__-__" required="required"/>
+				</div>
+				<!-- +e.input-wrap-->
+				<button class="form-wrap__btn" type="submit"> Отправить
+				</button>
+				<div class="form-wrap__policy">
+					<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Отправляя, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- #modal-call-->
+<div id="modal-thanks" style="display: none">
+	<div class="modal-win">
+		<div class="form-wrap">
+			<div class="text-center">
+				<div class="form-wrap__title">Спасибо за обращение!
+				</div>
+				<p class="after-headline">Мы свяжемся с Вами в ближайшее время</p>
+			</div>
+			<button class="form-wrap__btn modal-close-js m-0" type="button"> Закрыть
+			</button>
+		</div>
+	</div>
+</div>
+<!-- #modal-thanks-->
+<!-- end modals-->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Модальные окна</title>
+		<meta name="description" content="Выкупим ваш авто в любом состоянии в день обращения на 10% дороже конкурентов! Бесплатная оценка и выезд. Даем максимально выгодную цену. После выкупа вам не придут штрафы.">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#e2b542">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#e2b542">
+		<link type="image/ico" href="favicon/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="section container">
+				<h1>Страница для  демонстрации модальных окон</h1>
+				<div class="row">
+										<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">modal-call</a></div>
+				</div>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<input name="example-input-field" type="hidden"/>
+						<input class="order" name="order" type="hidden" value="форма в модалке"/>
+						<input class="utm_source" name="utm_source" type="hidden"/>
+						<input class="utm_term" name="utm_term" type="hidden"/>
+						<input class="utm_medium" name="utm_medium" type="hidden"/>
+						<input class="utm_campaign" name="utm_campaign" type="hidden"/>
+						<div class="text-center">
+							<div class="form-wrap__title">Оставить заявку
+							</div>
+							<p class="after-headline">Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (___)-___-__-__" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn" type="submit"> Отправить
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Отправляя, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-thanks" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<div class="text-center">
+						<div class="form-wrap__title">Спасибо за обращение!
+						</div>
+						<p class="after-headline">Мы свяжемся с Вами в ближайшее время</p>
+					</div>
+					<button class="form-wrap__btn modal-close-js m-0" type="button"> Закрыть
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-thanks-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

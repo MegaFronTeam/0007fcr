@@ -1,0 +1,26 @@
+
+mixin modal() 
+	//  start modals
+	//- a(href="modal-call").link-modal-js modal-call 
+	div(id="modal-call"  style="display: none" )
+		+b.modal-win
+			+form-wrap("форма в модалке")
+				.text-center
+					+e.title Оставить заявку
+					p.after-headline Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+
+				+input("Ваше Имя",'text','','name')(required)  
+				+input("+7 (___)-___-__-__",'tel')(required)
+				+e.btn(type="submit")  Отправить
+				+policy()
+	// #modal-call
+	div(id="modal-thanks"  style="display: none" )
+		+b.modal-win
+			+b.form-wrap
+				.text-center
+					+e.title Спасибо за обращение!
+					p.after-headline Мы свяжемся с Вами в ближайшее время
+				+e.btn(type="button").modal-close-js.m-0  Закрыть
+	// #modal-thanks
+	
+	// end modals

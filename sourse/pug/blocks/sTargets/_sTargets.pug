@@ -1,0 +1,23 @@
+mixin sTargets(data)
+	// start sTargets
+	+b.SECTION.sTargets.bg-wrap.section#sTargets&attributes(attributes)
+		+img("img/target-bg.png",'bg').picture-bg
+		.container
+			.row
+				.col-md-6
+					+b.section-title
+						h2 Наши принципы и&nbsp;цели
+						p.text-primary В&nbsp;нашей работе всё честно и&nbsp;прозрачно, особенно оценка автомобиля
+						p Мы&nbsp;ответственно подходим к&nbsp;нашей работе. Мы&nbsp;не&nbsp;обманываем клиентов, наш приоритет&nbsp;&mdash; сделать продажу автомобиля максимально удобной и&nbsp;выгодной для клиента. Мы&nbsp;дорожим своей репутацией и&nbsp;нам важно, чтобы человек к&nbsp;нам обратился повторно. 
+				.col
+					mixin item(t,p, i)
+						+e.item
+							+e.title= t
+							+e.text= p
+							+e.img-wrap
+								+img(`img/sTargets-${i}.svg`).res-i
+					+item(`>930`,`выкупленных автомобилей`,`1`)
+					+item(`60`,`минут среднее время сделки`,`2`)
+					+item(`5`,`лет на авторынке`,`3`)
+
+	// end sTargets

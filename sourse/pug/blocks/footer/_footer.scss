@@ -1,0 +1,114 @@
+.footer {
+		
+	margin-top: auto;
+	font-size: rem(14);
+	padding-top: rem(45);
+	@include media-breakpoint-up(md) {
+
+		padding-bottom: rem(45);
+	}
+	padding-bottom: rem(100);
+	.row{
+		--bs-gutter-y: 20px;
+	}
+	&__copy{
+
+	}
+
+	&__policy{
+		--bs-link-color: #{rgba(#252525, .5)}
+	}
+	
+	&__develop{
+		a{
+			
+			--bs-link-color: #{$body-color}
+		}
+	}
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+}
+
+.fixed-btn{
+	position: fixed;
+	left: rem(20px);
+	bottom: rem(20px);
+	display: flex;
+	align-items: center;
+	z-index: 800;
+	&__btn{
+		@extend .btn, .btn-primary;
+		width: 100px;
+		height: rem(40);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin-right: 5px;
+		border-radius: 50px;
+		font-size: 12px;
+	}
+	.soc{
+		&__item{
+			&:hover{
+				opacity: 0.8;
+			}
+			border-radius: 50px;
+			display: flex;
+			width: rem(60);
+			height: rem(40);
+			justify-content: center;
+			align-items: center;
+			&--tg{
+				background-color: #1b92d1;
+			} 
+			&--whatsapp{
+				background-color: #48c857;
+			}
+			&--viber{
+				background-color: #675da9;
+			}
+
+
+			img{
+				width: rem(40);
+			}
+		}
+	}
+}

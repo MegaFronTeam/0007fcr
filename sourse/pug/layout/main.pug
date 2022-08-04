@@ -1,0 +1,37 @@
+include include.pug
+include js-css.pug
+include ../blocks/modal/_modal.pug
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+
+		block title
+			title title
+		meta(name="description", content="Выкупим ваш авто в любом состоянии в день обращения на 10% дороже конкурентов! Бесплатная оценка и выезд. Даем максимально выгодную цену. После выкупа вам не придут штрафы.")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport", content="width=device-width,initial-scale=1.0, user-scalable=0")
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#e2b542">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#e2b542">
+		link(type="image/ico", href='favicon/favicon.ico', rel='shortcut icon') 
+		<meta name="format-detection" content="telephone=no"> 
+		+allcss()
+	block variables
+	//- style.
+	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
+	//- body.loaded_hiding(class= mainPage) 
+	body(class=mainPage data-bg=bg)
+		.main-wrapper
+			block pagecontent
+				h3 content
+		
+		+modal()
+
+		+allcjs()
+		
+		

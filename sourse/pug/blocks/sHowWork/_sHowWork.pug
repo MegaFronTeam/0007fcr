@@ -1,0 +1,21 @@
+mixin sHowWork(data)
+	// start sHowWork
+	+b.SECTION.sHowWork.section#sHowWork&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как мы работаем
+				p.text-primary 5&nbsp;шагов к&nbsp;получению денежных средств за&nbsp;ваш автомобиль
+			+e.row.row
+				mixin item(i,t,p)
+					+e.col.col-lg.col-md-4.col-sm-6
+						+e.icon-wrap
+							+img(`img/sHowWork-${i}.svg`)
+						+e.title= t
+						p!= p
+				+item(`1`,`Заявка`,`Оставляете заявку на&nbsp;сайте или звоните по&nbsp;телефону: <a href="tel:+7(985)088-51-11">+7 (985) 088-51-11</a>`)
+				+item(`2`,`Оценка авто`,`Наши специалисты проводят предварительную оценку вашего авто исходя из&nbsp;данной информации.`)
+				+item(`3`,`Осмотр авто`,`К&nbsp;вам бесплатно выедет наш специалист и&nbsp;осмотрит ваш автомобиль.`)
+				+item(`4`,`Оформление`,`При успешном согласовании деталей сделки мы&nbsp;оформляем документы.`)
+				+item(`5`,`Оплата`,`Сделка совершена в&nbsp;кратчайшие сроки и&nbsp;с&nbsp;достойной компенсацией.`)
+			+e.btn(href="#") Оставить заявку
+	// end sHowWork

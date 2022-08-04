@@ -1,0 +1,16 @@
+mixin item-sos(icon, a='#')
+	+e.A.item(href= a target="_blank" class=`soc__item--${icon}`)
+		if block
+			block
+		else
+			img(src=`img/svg/${icon}.svg`, alt="")
+//- social buttons
+mixin soc()
+	+b.soc
+		if block
+			block
+		else
+			each soc in social
+				+item-sos(soc[0], soc[1])
+
+//- /social buttons 

@@ -1,0 +1,14 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row.text-center
+				.col-md
+					+e.policy(href="#") Политика конфиденциальности
+				+e.copy.col-md-auto.order-md-first © #[span.year-js 2022] год. Все права защищены.
+				.col-md-auto
+					+e.develop
+						span.text-opacity-50 Разработка сайта -
+						| #[a(href="https://t.me/arts_man" target="_blank")  Artsman]
+	+b.fixed-btn
+		+e.btn(href="tel:+7(985)088-51-11").d-md-none Позвонить
+		+soc()

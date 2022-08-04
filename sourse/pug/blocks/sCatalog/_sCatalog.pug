@@ -1,0 +1,50 @@
+mixin product-item(i, t, t2, p ,pr)
+	+b.product-item
+		+e.img-wrap
+			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
+			.img-wrap-center 
+				+img(`img/prod-${i}.jpg`)
+		+e.caption
+			+e.title!= t
+			+e.char!= t2
+			+e.text!= p
+			+e.price
+				.small Выкупили за
+				.text-primary!= pr
+	// /.product-item
+
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Выкупленные автомобили
+				p.text-primary Выкупаем проблемные автомобили в день обращения
+			+e.row.row
+				- const wrapClass="col-xl-3 col-lg-4 col-md-6"
+				+e.col(class= wrapClass)
+					+product-item(`1`,`Volkswagen Polo (залог)`,'1.6 л, АКПП, 2018',`Выкуплен в течении 1 часа после обращения.`,`700 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`2`,`Kia Rio (арест)`,'1.6 л, АКПП, 2015',`Решили вопрос клиента, чтобы не потерял своё имущество.`,`680 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`3`,`Hyundai Solaris (залог в МФО)`,'1.4 л, АКПП, 2016',`Помогли клиенту закрыть долг в МФО, получили на руки ПТС и полностью закрыли вопрос.`,`560 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`4`,`Toyota Camry (запрет)`,'2.5 л, АКПП, 2016',`Помогли клиенту избежать изъятия автомобиля в пользу третьих лиц.`,`1 250 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`5`,`Renault Logan (залог)`,'1.6 л, АКПП, 2017',`Выкуплена в первый день обращения.`,`510 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`6`,`Skoda Octavia (арест)`,'1.4 л, АКПП, 2018',`Выкуплена в течение нескольких часов после обращения.`,`1 040 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`7`,`Mazda 6 (арест)`,'2.5 л, АКПП, 2016',`Выкуплена в разгар НГ каникул, без погашения.`,`1 100 000 ₽`) 
+				+e.col(class= wrapClass)
+					+product-item(`8`,`Skvoda Rapid (запрет + залог)`,'1.6 л, АКПП, 2016',`Помогли клиенту закрыть долг, получили ПТС на руки и полностью закрыли вопрос.`,`875 000 ₽`) 
+			+e.footer
+				+e.footer-text Оставьте заявку и&nbsp;мы&nbsp;расчитаем стоимость выкупа вашего авто
+				+form('Рассчитать стоимость авто')
+				.row.g-2
+					.col-auto
+						+e.tel(href="tel:+7(985)088-51-11") +7 (985) 088-51-11
+					.col-auto
+						+soc
+
+	// end sCatalog

@@ -1,0 +1,26 @@
+mixin topLine()
+	// start topLine
+	+b.topLine&attributes(attributes)
+		.container
+			.row
+				.col-xl-auto.col
+					a(href="/")
+						img(src="img/logo.svg", alt="").res-i
+				.col-xl.col-auto.d-none.d-xl-block
+					+e.text.small Экспресс-сервис по&nbsp;скупке автомобилей
+				.col-auto
+					+e.place
+						+icon("mark")
+						div Москва
+							.text-opacity-50.d-none.d-lg-block Московская область, Санкт-Петербург
+							.text-opacity-50.d-lg-none МO, Санкт-Петербург
+
+				.col-auto.d-none.d-sm-block
+					+soc()
+				.col-auto.d-none.d-md-block
+					+e.contact
+						+e.tel(href="tel:+7(985)088-51-11") +7 (985) 088-51-11
+						.text-opacity-50 Звоните 24/7
+				.col-auto.d-none.d-lg-block
+					+e.btn(href="#modal-call").link-modal-js Оставить заявку
+	// end topLine

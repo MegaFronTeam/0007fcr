@@ -1,0 +1,78 @@
+
+	// start .sForm
+	.sForm {
+		@include media-breakpoint-up(lg) {
+
+			// --sPB: #{rem(75)};
+			--sTPB: #{rem(45)};
+		}
+
+		.form-wrap{
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: rem(46);
+			&__policy{
+				justify-content: center;
+				text-align: center;
+			}
+		}
+		.form-check  {
+			justify-content: center;
+		}
+		.form-check-input{
+			float: none;
+			margin-right: rem(10);
+		}
+		&__text{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(470);
+			text-align: center;
+			font-size: rem(14);
+			margin-bottom: rem(28);
+			a{
+				display: inline-block;
+			}
+		}
+		&__btn{ 
+			@extend .btn, .btn-outline-light;
+			width: rem(240);
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			height: rem(60);
+			img{
+				flex: 0 0 auto;
+				margin-right: rem(10);
+			}
+			--bs-btn-border-width: 1px;
+		} 
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sForm

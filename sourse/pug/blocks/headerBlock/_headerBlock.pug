@@ -1,0 +1,39 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-lg.col
+					h1 Выкупим ваш авто в&nbsp;любом состоянии в&nbsp;день обращения на&nbsp;10% дороже конкурентов!
+					p В&nbsp;кредите, в&nbsp;залоге, без документов
+					+e.row-sm.row
+						mixin item(i,t)
+							+e.col.col-sm-4
+								+img(`img/head-i-${i}.svg`)
+								+e.text!= t
+						+item(`1`,`Бесплатная оценка и&nbsp;выезд`)
+						+item(`2`,`Даем максимально выгодную цену`)
+						+item(`3`,`После выкупа вам не&nbsp;прийдут штрафы`)
+					+form()
+				.col-xl-6.col-lg-5
+					+e.img-wrap
+						+img("img/head-img.png").main-img
+						+b.rew-block
+							.row.g-2.mb-3
+								.col-auto.order-sm-last
+									+img("img/money.png")
+								+e.text.col Выкупаем  
+									strong Volkswagen&nbsp;Polo, Hyundai Solaris, Kia Rio  
+									| и&nbsp;др. автомобили
+
+							.row.g-2.mb-3.d-none.d-sm-flex
+								.col-auto
+									+img("img/logo-1.png")
+								.col-auto
+									+img("img/logo-2.png")
+								.col-auto
+									+img("img/logo-3.png")
+							a.btn.btn-outline-light(href="#")
+								+img("img/svg/whatsapp2.svg")
+								| Оценить онлайн
+	// end headerBlock
