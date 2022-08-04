@@ -4,6 +4,12 @@
 		padding: rem(15) 0;
 		border-bottom: 1px solid #E2E2E2;
 		font-weight: 500;
+		width: 100%;
+		left: 0;
+		top: 0;
+		position: fixed;
+		z-index: 200;
+		background-color: #fff;
 		 .row{
 			align-items: center;
 		 }
